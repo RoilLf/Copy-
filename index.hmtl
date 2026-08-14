@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediaFire Download</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Inter", sans-serif;
+      color: white;
+      overflow: hidden;
+
+      background:
+        radial-gradient(circle at 20% 20%, rgba(126, 87, 255, 0.25), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(0, 200, 255, 0.18), transparent 30%),
+        linear-gradient(135deg, #070711, #101025 50%, #080812);
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 45px 45px;
+      mask-image: linear-gradient(to bottom, transparent, black, transparent);
+    }
+
+    .card {
+      position: relative;
+      width: min(90%, 430px);
+      padding: 42px 30px;
+      text-align: center;
+
+      background: rgba(18, 18, 35, 0.72);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 28px;
+
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+
+      box-shadow:
+        0 25px 80px rgba(0,0,0,0.5),
+        inset 0 1px rgba(255,255,255,0.08);
+    }
+
+    .icon {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 22px;
+      font-size: 34px;
+
+      background: linear-gradient(135deg, #7c5cff, #3aa7ff);
+      box-shadow: 0 12px 35px rgba(100, 90, 255, 0.35);
+    }
+
+    h1 {
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #a8a8bb;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      width: 100%;
+      padding: 16px 22px;
+      border: none;
+      border-radius: 15px;
+
+      background: linear-gradient(135deg, #8066ff, #4d9dff);
+      color: white;
+
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+
+      box-shadow: 0 10px 30px rgba(90, 100, 255, 0.3);
+      transition: 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(90, 100, 255, 0.45);
+    }
+
+    .button:active {
+      transform: scale(0.97);
+    }
+
+    .note {
+      margin-top: 18px;
+      font-size: 11px;
+      color: #66667a;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="icon">↗</div>
+
+    <h1>Go To MediaFire</h1>
+
+    <p>
+      Click the button below to continue to the MediaFire download page.
+    </p>
+
+    <button class="button" onclick="goToMediaFire()">
+      Continue to MediaFire
+    </button>
+
+    <div class="note">
+      You will be redirected to MediaFire
+    </div>
+  </div>
+
+  <script>
+    function goToMediaFire() {
+      window.location.href =
+        "https://www.mediafire.com/file/tohgtw5uxo8q69l/Morphe_TV_Logo.apk/file";
+    }
+  </script>
+
+</body>
+</html>
